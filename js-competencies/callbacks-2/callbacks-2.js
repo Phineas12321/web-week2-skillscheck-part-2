@@ -10,7 +10,7 @@
 //should return the SECOND callback param invoked.
 
   //Code here
-
+let invokesCallbacks = (num, cb1, cb2) => num > 10? cb1(): cb2()
 
 //////////////////PROBLEM 2////////////////////
 
@@ -25,7 +25,8 @@
   function timedGreeting(callback){
 
     //Code here
-
-    
+    greeting = setTimeout(callback, 1000)
+    console.log(greeting)
+    return greeting
   }
 
