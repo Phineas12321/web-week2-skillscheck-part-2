@@ -14,19 +14,17 @@ let invokesCallbacks = (num, cb1, cb2) => num > 10? cb1(): cb2()
 
 //////////////////PROBLEM 2////////////////////
 
-//Within the function timedGreeting below, create a
-//setTimeout (a native javascript method) 
-//that assigns the result 
-//of invoking the callback parameter 
-//to the variable greeting, after 1 second.
+/*Within the function timedGreeting below, create a
+setTimeout (a native javascript method) 
+that assigns the result 
+of invoking the callback parameter 
+to the variable greeting, after 1 second*/
 
   var greeting;
 
   function timedGreeting(callback){
-
+    
     //Code here
-    greeting = setTimeout(callback, 1000)
-    console.log(greeting)
-    return greeting
+    setTimeout(function(){greeting = callback()}, 1000)
   }
-
+  
