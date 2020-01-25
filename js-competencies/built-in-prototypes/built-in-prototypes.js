@@ -10,7 +10,13 @@
 //use the built-in array method .map
   
   //Code here
-
+let dragonMapper = arr => {
+  newArr = arr.map((e, i, arr) => {
+    console.log(`${e}...here be dragons`)
+    return `${e}...here be dragons`
+  })
+  return newArr
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -21,7 +27,16 @@
 //cookieLoversOnly should return the filtered array.
   
   //Code here
-
+let cookieLoversOnly = arr => {
+  newArr = arr.filter((e, i, arr) => {
+    for(let key in e){
+      if(key ==='favoriteCookie'){
+        return e
+      }
+    }
+  })
+  return newArr
+}
 
 //////////////////PROBLEM 3////////////////////
 
@@ -35,7 +50,7 @@
 
 
   //Code here
-
+let changeValue = (arr, cb) => arr.forEach((e, i ,arr) => cb(e))
 
 
 //////////////////PROBLEM 4////////////////////
@@ -47,7 +62,10 @@
 //Return the product.
   
   //Code here
-
+let findProduct = arr => {
+  let product = arr.reduce((acc, e, i, arr) => acc * e, 1)
+  return product
+}
 
 //////////////////PROBLEM 5////////////////////
 
@@ -64,7 +82,7 @@
 // cipherize will return: "d"
 
   //Code here
-
+let cipherize = (arr, str) => arr[arr.indexOf(str)].charAt(arr.indexOf(str))
 
 
 //////////////////PROBLEM 6////////////////////
@@ -75,3 +93,14 @@
 //apart, reversing it, and putting it back together again.
 
   //Code here
+let reverseMe = str => {
+  let splitStr = str.split('')
+  let reversedStr = splitStr.reverse()
+  let joinedStr = reversedStr.join('')
+  return joinedStr
+
+  // str.split('')
+  // str.reverse()
+  // str.join('')
+  // return str
+}
